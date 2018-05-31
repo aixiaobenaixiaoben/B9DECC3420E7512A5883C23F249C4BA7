@@ -10,6 +10,12 @@ import UIKit
 import React
 
 class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+    }
 
     @IBAction func showScore(_ sender: Any) {
         let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")
@@ -29,6 +35,10 @@ class ViewController: UIViewController {
         let vc = UIViewController()
         vc.view = rootView
         self.present(vc, animated: true, completion: nil)
+        
+//        self.hidesBottomBarWhenPushed = true
+//        self.navigationController?.pushViewController(vc, animated: true)
+//        self.hidesBottomBarWhenPushed = false
     }
     
 }

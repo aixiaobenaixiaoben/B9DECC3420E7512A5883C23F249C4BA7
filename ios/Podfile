@@ -17,6 +17,8 @@ target 'RNApp' do
     'RCTNetwork',
     'RCTWebSocket', # needed for debugging
     # Add any other subspecs you want to use in your project
+    'RCTLinkingIOS',
+    'RCTImage',
   ]
   # Explicitly include Yoga if you are using RN >= 0.42.0
   pod "yoga", :path => "../node_modules/react-native/ReactCommon/yoga"
@@ -25,5 +27,8 @@ target 'RNApp' do
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+
+  # Add any other subspecs you want to use in your project
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
 end
